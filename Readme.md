@@ -66,5 +66,8 @@ Summer had the most incidents involving animals, with 958 incidents.
 Took 20250926-113053 - 20250926-113041 seconds
 ```
 
+### Additional Examples
+View the rest of the example questions and their responses [here](Examples.md).
+
 ### Conclusion
 Of the three prompting strategies, the most consistently successful was the *few-shot cross domain* prompt. It seemed to help ChatGPT make the most consistent syntax and return the correct results. On the other hand, the least consistent prompting strategy was the *few-shot single domain* prompt. It never returned a correct SQL query in all of the times that it was run.
