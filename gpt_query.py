@@ -137,7 +137,7 @@ def cross_domain_few_shot_sql_query(client, question):
     Generate the SQL query to answer the question. Only return the SQL query, do not include any explanations or other text.
                     """
     response = client.responses.create(
-        model="gpt-5-mini",
+        model="gpt-5",
         instructions="You are a helpful assistant that translates natural language to SQL queries.",
         input=context
     )
@@ -233,7 +233,7 @@ def few_shot_single_domain_sql_query(client, question):
 """
 
     response = client.responses.create(
-        model = "gpt-5-mini",
+        model = "gpt-5",
         instructions = "You are a helpful assistant that translates natural language to SQL queries. You only return the SQL query, do not include any explanations or other text.",
         input = question,)
     return(response.output_text)
@@ -263,7 +263,7 @@ def zero_shot_sql_query(client, question):
     """
 
     response = client.responses.create(
-        model="gpt-5-mini",
+        model="gpt-5",
         instructions = "You are a helpful assistant that translates natural language to SQL queries.",
         input = context 
     )
@@ -295,7 +295,7 @@ def nl_sql_response(client, question, sql_query, sql_response):
         Respond with a concise, natural language answer describing what the query results show.
     """
     response = client.responses.create(
-        model="gpt-5-mini",
+        model="gpt-5",
         instructions="You are a helpful assistant that provides concise answers based on SQL queries and questions.",
         input=context
     )
@@ -303,7 +303,7 @@ def nl_sql_response(client, question, sql_query, sql_response):
 
 def generate_response(client, prompt):
     response = client.responses.create(
-        model="gpt-5-mini",
+        model="gpt-5",
         input=prompt
     )
     return(response.output_text)
